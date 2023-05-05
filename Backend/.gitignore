@@ -1,0 +1,26 @@
+# dependencies
+/node_modules
+
+# production build files
+/build
+/dist
+
+/files
+
+# logs and databases
+*.log
+*.sqlite
+*.db
+
+# environment variables
+.env
+
+# IDE files
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# misc
+.DS_Store
+Thumbs.db
