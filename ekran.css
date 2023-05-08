@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
-  }
-  
+  box-sizing: border-box;
+}
+
   input[type=text], input[type=datetime-local], select, textarea {
     width: 100%;
     padding: 12px;
@@ -9,12 +9,19 @@
     border-radius: 4px;
     resize: vertical;
   }
-  
+
   label {
-    padding: 12px 12px 12px 0;
+    padding: 2px 2px 2px 0;
     display: inline-block;
+    font-size: 23px;
+    font-weight: 90px;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-left: 20px;
   }
-  
+
   input[type=submit] {
     background-color: #04AA6D;
     color: white;
@@ -24,33 +31,33 @@
     cursor: pointer;
     float: right;
   }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
+
   .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
+    margin-top: 50px;
+    border-radius: 20px;
+    background-color:rgb(220, 232, 235);
     padding: 20px;
   }
-  
+
   .col-25 {
     float: left;
-    width: 5%;
+    width: 15%;
     margin-top: 6px;
   }
-  
+
   .col-75 {
     float: left;
-    width: 35%;
+    width: 50%;
     margin-top: 6px;
   }
-  
+
   .row::after {
     content: "";
     display: table;
     clear: both;
+  }
+  button{
+    margin: 15px;
   }
   
 
