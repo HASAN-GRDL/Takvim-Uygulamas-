@@ -6,7 +6,6 @@ const User = db.define('User', {
   first_name: {
     allowNull: false,
     type: DataTypes.STRING,
-    allowNull: false,
     validate: {
       notNull: true,
       notEmpty: true
