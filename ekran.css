@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+body{
+  background-image: url("picture/picture.jpg");
+}
 
   input[type=text], input[type=datetime-local], select, textarea {
     width: 100%;
@@ -34,9 +37,9 @@
 
   .container {
     margin-top: 50px;
-    border-radius: 20px;
+    border-radius: 30px;
     background-color:rgb(220, 232, 235);
-    padding: 20px;
+    padding: 30px;
   }
 
   .col-25 {
@@ -58,7 +61,13 @@
   }
   button{
     margin: 15px;
+    height: 35px;
+    background-image: linear-gradient(to left, #c1a1e3, #e7e1ed);
+    border-color:whitesmoke;
+    border-radius: 10px;
   }
-  
+  tr{
+    background-image: linear-gradient(to left, #d4c7e2, #e7e1ed);
+  }
 
   

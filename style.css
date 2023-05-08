@@ -1,6 +1,6 @@
 body {
     background-color:#eee;
-    background-image: url("picture.jpg");
+    background-image: url("picture/picture.jpg");
 }
 h1,h3{
     font-size: 53px;
