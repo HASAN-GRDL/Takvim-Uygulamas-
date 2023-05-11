@@ -2,6 +2,14 @@ const { DataTypes } = require('sequelize')
 const db = require('../config/database')
 
 const Event = db.define('Event', {
+  user_id: {
+    allowNull: false,
+    type: DataTypes.INTEGER,
+    validate: {
+      notNull: true,
+      notEmpty: true
+    }
+  },
   date: {
     allowNull: false,
     type: DataTypes.DATEONLY,

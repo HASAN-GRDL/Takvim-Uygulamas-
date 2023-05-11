@@ -40,7 +40,9 @@ function ValidationTranslate (error) {
 
 function DatabaseTranslate (error) {
   const TR = {
-    DateTimeParseError: 'Geçerli bir tarih giriniz.'
+    DateTimeParseError: 'Geçerli bir tarih giriniz.',
+    pg_strtoint32: 'İnteger bir değer giriniz.',
+    ri_ReportViolation: `Girilen ${error.parent.detail?.match(/(?<=\().*?(?=\))/g)[0]} ile bir primaryKey bulunamadı.`
   }
 
   const result = TR[error.parent.routine]

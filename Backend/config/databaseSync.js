@@ -20,3 +20,6 @@ Event.beforeCreate((event, options) => {
 
   event.price = discountedPrice
 })
+
+User.hasMany(Event, { foreignKey: 'user_id', onDelete: 'CASCADE' })
+Event.belongsTo(User, { foreignKey: 'user_id' })
