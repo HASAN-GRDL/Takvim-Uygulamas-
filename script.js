@@ -1,8 +1,8 @@
 function myFunction() {
-    window.open("ekran.html" ) ;
-  }
+  window.open("ekran.html" ) ;
+}
 
-  function ekle() {
+function ekle() {
 
 const tr = document.createElement("tr");
 
@@ -13,7 +13,7 @@ user.appendChild(textUser);
 
 var datedeger = document.getElementById("date").value;
 const date = document.createElement("th");
-const textDate = document.createTextNode(datedeger );
+const textDate = document.createTextNode(datedeger);
 date.appendChild(textDate);
 
 var descriptionDeger = document.getElementById("aciklama").value;
@@ -26,7 +26,8 @@ tr.appendChild(date);
 tr.appendChild(description);
 document.getElementById("myTable").appendChild(tr);
 
-  }
+
+}
 
  
   
