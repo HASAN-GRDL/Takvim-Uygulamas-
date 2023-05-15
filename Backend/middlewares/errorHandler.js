@@ -4,10 +4,11 @@ module.exports = (err, req, res, next) => {
   if (!err) next()
 
   console.log('hataya girdi')
+  console.log(err)
 
   if (err instanceof DatabaseError) {
     // console.log('DatabaseError', err)
-    return res.status(500).send({ error: DatabaseTranslate(err) })
+    return res.status(400).send({ error: DatabaseTranslate(err) })
   }
 
   if (err instanceof ValidationError) {
@@ -41,6 +42,7 @@ function ValidationTranslate (error) {
 function DatabaseTranslate (error) {
   const TR = {
     DateTimeParseError: 'Geçerli bir tarih giriniz.',
+    DecodeTimeOnly: 'Geçerli bir saat giriniz.',
     pg_strtoint32: 'İnteger bir değer giriniz.',
     ri_ReportViolation: `Girilen ${error.parent.detail?.match(/(?<=\().*?(?=\))/g)[0]} ile bir primaryKey bulunamadı.`
   }
