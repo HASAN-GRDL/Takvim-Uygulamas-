@@ -4,8 +4,8 @@ const use = require('../utils/use')
 
 const userController = require('../controllers/userController')
 
-router.get('/user/:username/', use(userController.getUser))
 router.post('/', use(userController.postUser))
 router.post('/login', use(userController.login))
+router.get('/user/:username/', use(userController.getUser))
 
 module.exports = router

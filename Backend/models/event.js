@@ -17,7 +17,7 @@ const Event = db.define('Event', {
       notNull: true,
       notEmpty: true,
       isDate: true,
-      isAfter: new Date().toLocaleDateString()
+      isAfter: new Date().toISOString()
     }
   },
   time: {
@@ -37,8 +37,7 @@ const Event = db.define('Event', {
     }
   },
   price: {
-    type: DataTypes.BIGINT,
-    noUpdate: true
+    type: DataTypes.BIGINT
   },
   type: {
     allowNull: false,
@@ -52,4 +51,3 @@ const Event = db.define('Event', {
 })
 
 module.exports = Event
-
