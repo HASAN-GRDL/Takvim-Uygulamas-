@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body{
-  background-image: url("picture/picture.jpg");
+  background-image: url("/picture/picture.jpg");
 }
 
   input[type=text], input[type=datetime-local], select, textarea {

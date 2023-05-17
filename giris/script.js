@@ -1,6 +1,7 @@
 function myFunction() {
-  window.open("ekran.html" ) ;
+  window.open("/ekran/ekran.html" ) ;
 }
+
 
 
 
