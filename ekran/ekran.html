@@ -15,10 +15,10 @@
         <form action="/action_page.php">
         <div class="row">
           <div class="col-25">
-            <label for="fname">İsim :</label>
+            <label for="fname">TİP :</label>
           </div>
           <div class="col-75">
-            <input type="text" id="isim" name="isim" placeholder="Adınız..">
+            <input type="text" id="tip" name="tip" placeholder="Tip">
           </div>
         </div>
         <div class="row">
@@ -34,7 +34,7 @@
             <label for="time">Saat :</label>
           </div>
           <div class="col-75">
-            <input id="time" type="time" class="form-control" placeholder="Tarih">
+            <input id="time" type="time" class="form-control" placeholder="Saat">
           </div>
         </div>
         <div class="row">
@@ -42,17 +42,17 @@
             <label for="subject">Açıklama :</label>
           </div>
           <div class="col-75">
-            <textarea id="aciklama" name="Açiklama" placeholder="Açıklama alanı.." style="height:200px"></textarea> 
+            <textarea id="aciklama" name="Açiklama" placeholder="Açıklama alanı.."></textarea> 
           </div>
         </div>
         <br>
         </form>
         <hr><hr>
         <div> 
-          <button onclick="ekle()" >Oluştur</button>
+          <button onclick="ekle()" >OLUŞTUR</button>
           <table id="myTable" class="table table-striped">
               <tr>
-                <th scope="col">İSİM</th>
+                <th scope="col">TİP</th>
                 <th scope="col">TARİH</th>
                 <th scope="col">SAAT</th>
                 <th scope="col">AÇIKLAMA</th>

@@ -4,29 +4,29 @@ function ekle() {
 
     const tr = document.createElement("tr");
     
-    var userdeger = document.getElementById("isim").value;
-    const user = document.createElement("th");
-    const textUser = document.createTextNode(userdeger);
-    user.appendChild(textUser);
+    var tipdeger = document.getElementById("tip").value;
+    const tip = document.createElement("td");
+    const textTip = document.createTextNode(tipdeger);
+    tip.appendChild(textTip);
     
     var datedeger = document.getElementById("date").value;
-    const date = document.createElement("th");
+    const date = document.createElement("td");
     const textDate = document.createTextNode(datedeger);
     date.appendChild(textDate);
 
 
     var timedeger = document.getElementById("time").value;
-    const time = document.createElement("th");
+    const time = document.createElement("td");
     const textTime = document.createTextNode(timedeger);
     time.appendChild(textTime);
     
     var descriptionDeger = document.getElementById("aciklama").value;
-    const description = document.createElement("th");
+    const description = document.createElement("td");
     const textDescription = document.createTextNode(descriptionDeger);
     description.appendChild(textDescription);
 
     
-    tr.appendChild(user);
+    tr.appendChild(tip);
     tr.appendChild(date);
     tr.appendChild(time);
     tr.appendChild(description);

@@ -67,10 +67,16 @@ body{
     border-radius: 10px;
   }
   tr{
-    background-image: linear-gradient(to left, #d4c7e2, #e7e1ed);
+    background-image: linear-gradient(to left, #d4c7e2, #d0c0e1);
   }
   #myTable{
     visibility:hidden;
+  }
+  table th{
+    color: rgb(147, 50, 113);
+  }
+  table td{
+    font-weight: bold;
   }
 
   
