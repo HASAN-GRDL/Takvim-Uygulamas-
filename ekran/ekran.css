@@ -69,5 +69,8 @@ body{
   tr{
     background-image: linear-gradient(to left, #d4c7e2, #e7e1ed);
   }
+  #myTable{
+    visibility:hidden;
+  }
 
   

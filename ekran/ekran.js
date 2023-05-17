@@ -1,4 +1,6 @@
 function ekle() {
+    var tablo = document.getElementById("myTable");
+    tablo.style.visibility = "visible";
 
     const tr = document.createElement("tr");
     
@@ -11,14 +13,22 @@ function ekle() {
     const date = document.createElement("th");
     const textDate = document.createTextNode(datedeger);
     date.appendChild(textDate);
+
+
+    var timedeger = document.getElementById("time").value;
+    const time = document.createElement("th");
+    const textTime = document.createTextNode(timedeger);
+    time.appendChild(textTime);
     
     var descriptionDeger = document.getElementById("aciklama").value;
     const description = document.createElement("th");
     const textDescription = document.createTextNode(descriptionDeger);
     description.appendChild(textDescription);
+
     
     tr.appendChild(user);
     tr.appendChild(date);
+    tr.appendChild(time);
     tr.appendChild(description);
     document.getElementById("myTable").appendChild(tr);
     
