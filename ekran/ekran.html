@@ -3,66 +3,78 @@
 
 <!DOCTYPE html>
 <html id="ekran" lang="en">
- <title>EKRN</title>
+ <title>TKVM.E</title>
 <head>
   <script src="ekran.js"></script>
     <link rel="stylesheet" type="text/css" href="ekran.css">
 
 </head>
 <body>
-    <div class="container">
-      <hr><hr>
-        <form action="/action_page.php">
-        <div class="row">
-          <div class="col-25">
-            <label for="fname">TİP :</label>
-          </div>
-          <div class="col-75">
-            <input type="text" id="tip" name="tip" placeholder="Tip">
-          </div>
+  <section class="table__body2">
+  <div class="container">
+    
+      <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname"><strong>TİP</strong></label>
         </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="date">Tarih :</label>
-          </div>
-          <div class="col-75">
-            <input id="date" type="date" class="form-control" placeholder="Tarih">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="time">Saat :</label>
-          </div>
-          <div class="col-75">
-            <input id="time" type="time" class="form-control" placeholder="Saat">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="subject">Açıklama :</label>
-          </div>
-          <div class="col-75">
-            <textarea id="aciklama" name="Açiklama" placeholder="Açıklama alanı.."></textarea> 
-          </div>
-        </div>
-        <br>
-        </form>
-        <hr><hr>
-        <div> 
-          <button onclick="ekle()" >OLUŞTUR</button>
-          <table id="myTable" class="table table-striped">
-              <tr>
-                <th scope="col">TİP</th>
-                <th scope="col">TARİH</th>
-                <th scope="col">SAAT</th>
-                <th scope="col">AÇIKLAMA</th>
-              </tr>
-          </table>
+        <div class="col-75">
+          <input type="text" id="tip" name="tip" placeholder="Tip">
         </div>
       </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="date"><strong>TARİH</strong> </label>
+        </div>
+        <div class="col-75">
+          <input id="date" type="date" class="form-control" placeholder="Tarih">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="time"><strong>SAAT</strong></label>
+        </div>
+        <div class="col-75">
+          <input id="time" type="time" class="form-control" placeholder="Saat">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject"><strong>AÇIKLAMA</strong></label>
+        </div>
+        <div class="col-75">
+          <textarea id="aciklama" name="Açiklama" placeholder="Açıklama alanı.."></textarea> 
+        </div>
+      </div>
+      <br>
+      </form>
+      <div> 
+        <button onclick="ekle()" >OLUŞTUR</button>
+      </div>
+    </div>
+  </section>
 
+  <main class="table">
+    <section class="table__header">
+        <h1>TKVM</h1>
+        <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+            <img src="/picture/search.png" alt="">
+        </div>
+    </section>
+    <section class="table__body">
 
-
+        <table id="myTable">
+           <tr>
+                        <th> TİP </th>
+                        <th> TARİH </th>
+                        <th> SAAT</th>
+                        <th> AÇIKLAMA </th>
+                </tr>
+        </table>
+     
+    </section>
+</main> 
 
 </body>
 </html>

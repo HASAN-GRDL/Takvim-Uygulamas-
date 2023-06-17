@@ -32,9 +32,10 @@ function ekle() {
     tr.appendChild(description);
     document.getElementById("myTable").appendChild(tr);
     
-    document.getElementById("isim").value="";
     document.getElementById("date").value="";
+    document.getElementById("time").value="";
     document.getElementById("aciklama").value="";
+    document.getElementById("tip").value="";
     
     
     }
