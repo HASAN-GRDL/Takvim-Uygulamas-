@@ -41,11 +41,10 @@ const Event = db.define('Event', {
   },
   type: {
     allowNull: false,
-    type: DataTypes.ENUM('meet', 'plan'),
+    type: DataTypes.ENUM('meet', 'plan', 'chat', 'lesson'),
     validate: {
       notNull: true,
-      notEmpty: true,
-      isIn: ['meet', 'plan']
+      notEmpty: true
     }
   }
 })
