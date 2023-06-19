@@ -3,10 +3,11 @@ const express = require('express')
 const db = require('./config/database')
 const syncModels = require('./config/databaseSync')
 const router = require('./routes')
-
+const cors = require('cors')
 const app = express()
 
 app.use(express.json())
+app.use(cors({ origin: '*' }))
 app.use('/api', router)
 app.listen(4444)
 
