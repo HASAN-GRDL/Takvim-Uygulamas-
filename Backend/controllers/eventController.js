@@ -7,16 +7,18 @@ module.exports.postEvent = async function (req, res) {
 }
 
 module.exports.getEventDate = async function (req, res) {
-  const { date } = req.query
+  const { userId, date } = req.query
+
+  const filter = {}
+  filter.user_id = userId
+  if (date) filter.date = { [Op.lt]: date }
 
   const result = await Event.findAll({
     where: {
-      date: {
-        [Op.eq]: date
-      }
+      ...filter
     }
   })
-  res.status(201).json(result)
+  res.status(200).json(result)
 }
 
 module.exports.updateEvent = async function (req, res) {

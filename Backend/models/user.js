@@ -61,10 +61,8 @@ const User = db.define('User', {
   email: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true,
     validate: {
       notNull: true,
-      isEmail: true,
       notEmpty: false
     }
   },
