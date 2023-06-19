@@ -37,5 +37,5 @@ function ekle() {
     document.getElementById("aciklama").value="";
     document.getElementById("tip").value="";
     
-    
     }
+
