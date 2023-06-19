@@ -1,41 +1,58 @@
 function ekle() {
-    var tablo = document.getElementById("myTable");
-    tablo.style.visibility = "visible";
+    //id yakalıyom
+    var urlParams = new URLSearchParams(window.location.search);
+    var userId = urlParams.get("user");
+    console.log(userId); 
 
-    const tr = document.createElement("tr");
-    
-    var tipdeger = document.getElementById("tip").value;
-    const tip = document.createElement("td");
-    const textTip = document.createTextNode(tipdeger);
-    tip.appendChild(textTip);
-    
-    var datedeger = document.getElementById("date").value;
-    const date = document.createElement("td");
-    const textDate = document.createTextNode(datedeger);
-    date.appendChild(textDate);
+    var date = document.getElementById("date").value;
+    var time = document.getElementById("time").value;
+    var aciklama = document.getElementById("aciklama").value;
+    var tip = document.getElementById("tip").value;
 
+   
+    if (date == "" || time == "" || aciklama == "" || tip == "" ) {
+        return window.alert("Zorunlu bütün alanları doldurunuz");
+      }
 
-    var timedeger = document.getElementById("time").value;
-    const time = document.createElement("td");
-    const textTime = document.createTextNode(timedeger);
-    time.appendChild(textTime);
-    
-    var descriptionDeger = document.getElementById("aciklama").value;
-    const description = document.createElement("td");
-    const textDescription = document.createTextNode(descriptionDeger);
-    description.appendChild(textDescription);
+    const newPost = {
+        user_id :userId,
+        date,
+        time,
+        description: aciklama,
+        type: tip
+        
+      }
 
+      fetch("http://localhost:4444/api/event", {
+    method: "POST",
+    body: JSON.stringify(newPost),
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then(response => response.json())
+    .then(event => {
+        if(event.description==aciklama){
+         window.alert("Plan başarıyla tanımlandı")
+        }
+        else{
+            window.alert("Günümüz tarihinden önceye plan tanımlayamazsınız")
+        }
+    })
     
-    tr.appendChild(tip);
-    tr.appendChild(date);
-    tr.appendChild(time);
-    tr.appendChild(description);
-    document.getElementById("myTable").appendChild(tr);
-    
-    document.getElementById("date").value="";
-    document.getElementById("time").value="";
-    document.getElementById("aciklama").value="";
-    document.getElementById("tip").value="";
-    
+    }
+
+    function veriCek(){
+
+        fetch("http://localhost:4444/api/event", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            }
+          })
+            .then(response => response.json())
+            .then(user => {
+              console.log(user)
+            })
     }
 
