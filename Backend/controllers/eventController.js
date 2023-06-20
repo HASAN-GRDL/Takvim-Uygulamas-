@@ -11,7 +11,7 @@ module.exports.getEventDate = async function (req, res) {
 
   const filter = {}
   filter.user_id = userId
-  if (date) filter.date = { [Op.lt]: date }
+  if (date) filter.date = { [Op.eq]: date }
 
   const result = await Event.findAll({
     where: {
