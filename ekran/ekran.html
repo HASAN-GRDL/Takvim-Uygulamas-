@@ -13,7 +13,7 @@
   <section class="table__body2">
   <div class="container">
     
-      <form action="/action_page.php">
+      <form >
       <div class="row">
         <div class="col-25">
           <label for="fname"><strong>TİP *</strong></label>
@@ -37,10 +37,18 @@
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="time"><strong>SAAT *</strong></label>
+          <label for="time"><strong>BAŞLANGIÇ SAATİ *</strong></label>
         </div>
         <div class="col-75">
-          <input id="time" type="time" class="form-control" >
+          <input id="stime" type="time" class="form-control" >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="time"><strong>BİTİŞ SAATİ *</strong></label>
+        </div>
+        <div class="col-75">
+          <input id="ftime" type="time" class="form-control" >
         </div>
       </div>
       <div class="row">
@@ -48,7 +56,7 @@
           <label for="subject"><strong>AÇIKLAMA *</strong></label>
         </div>
         <div class="col-75">
-          <textarea id="aciklama" name="Açiklama" placeholder="Açıklama alanı.. "></textarea> 
+          <textarea id="aciklama" name="Aciklama" placeholder="Açıklama alanı.. "></textarea> 
         </div>
         
       </div>
@@ -57,7 +65,7 @@
       
       <div> 
         
-        <a class="button" onclick="ekle(),veriCek()"> <span>OLUŞTUR </span></a>
+        <a class="button" onclick="ekle()"> <span>OLUŞTUR </span></a>
       </div>
    
     </div>
@@ -65,22 +73,15 @@
 
   <main class="table">
     <section class="table__header">
-        <h1>TKVM</h1>
+        <h1 id="header"></h1>
         <div class="input-group">
-            <input type="date" >
+            <input id="fDate" type="date" onchange="veriCek(date=true)">
             <img src="/picture/search.png" alt="">
         </div>
     </section>
     <section class="table__body" >
 
-        <table id="myTable">
-           <tr>
-                        <th> TİP </th>
-                        <th> TARİH </th>
-                        <th> SAAT</th>
-                        <th> AÇIKLAMA </th>
-                </tr>
-        </table>
+        <table id="myTable"></table>
      
     </section>
 </main> 

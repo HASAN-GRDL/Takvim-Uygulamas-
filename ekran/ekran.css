@@ -66,6 +66,7 @@ main.table {
   height: 1.5rem;
 }
 
+
 .table__header .input-group input {
   width: 80%;
   padding: 0 .5rem 0 .3rem;
@@ -185,10 +186,6 @@ label {
   clear: both;
 }
 
-#myTable {
-  visibility: hidden;
-}
-
 .button {
 
   position: absolute;
@@ -253,4 +250,9 @@ label {
 
 .button:active span {
   -webkit-transform: translate(0, 5px);
+}
+
+#btnSil{
+  margin: 5px;
+  border-radius: 50px;
 }

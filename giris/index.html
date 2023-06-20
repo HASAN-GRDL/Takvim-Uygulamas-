@@ -5,106 +5,112 @@
 <!DOCTYPE html>
 <html id="index" lang="en">
 
-	<title>TKVM</title>
+<title>TKVM</title>
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
 
-	<head>
-        <link rel="stylesheet" type="text/css" href="style.css">
-		<script src="script.js"></script>
-
-		<script src="jquery/jquery.min.js"></script>
-		
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		
-		<link rel="stylesheet" href="css/style.css">
-
-		<script src="js/bootstrap.min.js"></script>
-
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+	<script src="jquery/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-	</head>
-	<body>
-	
+</head>
+
+<body>
+
 	<div class="container-fluid">
 		<div class="container">
-            <h1> ZAMANI VERİMLİ KULLANMAYA BAŞLAYIN </h1>
+			<h1> ZAMANI VERİMLİ KULLANMAYA BAŞLAYIN </h1>
+			<hr>
 			<div class="row">
 				<div class="col-md-5">
- 					<form role="form" method="post" action="register.php">
-						<fieldset>							
-							<h3 class="text-uppercase pull-center"> ÜYE OL</h3>	
- 							<div class="form-group">
-								<label for="firstName"><strong>FİRST NAME *</strong></label>
-								<input type="text" name="firstName" id="firstName" class="form-control input-lg" placeholder="Ad *">
+					<form role="form" method="post" action="register.php">
+						<fieldset>
+							<h3 class="text-uppercase pull-center"> ÜYE OL</h3>
+							<div class="form-group">
+								<label for="firstName"><strong>AD *</strong></label>
+								<input type="text" name="firstName" id="firstName" class="form-control input-lg"
+									placeholder="Ad *">
 							</div>
 							<div class="form-group">
-								<label for="lastName"><strong>LAST NAME *</strong></label>
-								<input type="text" name="lastName" id="lastName" class="form-control input-lg" placeholder="Soyad *">
+								<label for="lastName"><strong>SOYAD *</strong></label>
+								<input type="text" name="lastName" id="lastName" class="form-control input-lg"
+									placeholder="Soyad *">
 							</div>
 							<div class="form-group">
-								<label for="password"><strong>PASSWORD *</strong></label>
-								<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Şifre *">
+								<label for="password"><strong>ŞİFRE *</strong></label>
+								<input type="password" name="password" id="password" class="form-control input-lg"
+									placeholder="Şifre *">
 							</div>
 							<div class="form-group">
-								<label for="userName"><strong>USERNAME *</strong></label>
-								<input type="text" name="userName" id="userName" class="form-control input-lg" placeholder="Kullanıcı adı *">
+								<label for="userName"><strong>KULLANICI ADI *</strong></label>
+								<input type="text" name="userName" id="userName" class="form-control input-lg"
+									placeholder="Kullanıcı adı *">
 							</div>
 							<div class="form-group">
-								<label for="tcNo"><strong>TC NO *</strong></label>
-								<input type="text" name="tcNo" id="tcNo" class="form-control input-lg" placeholder="Kimlik numarası *">
+								<label for="tcNo"><strong>KİMLİK NUMARASI *</strong></label>
+								<input type="text" name="tcNo" id="tcNo" class="form-control input-lg"
+									placeholder="Kimlik numarası *">
 							</div>
 							<div class="form-group">
-								<label for="phone"><strong>PHONE NUMBER *</strong></label>
-								<input type="tel" name="phone" id="phone" class="form-control input-lg" placeholder="Telefon numarası *">
+								<label for="phone"><strong>TELEFON NUMARASI *</strong></label>
+								<input type="tel" name="phone" id="phone" class="form-control input-lg"
+									placeholder="Telefon numarası *">
 							</div>
 							<div class="form-group">
-								<label for="email"><strong>EMAİL *</strong></label>
-								<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Adresi *">
+								<label for="email"><strong>EMAİL ADRESİ *</strong></label>
+								<input type="email" name="email" id="email" class="form-control input-lg"
+									placeholder="Email Adresi *">
 							</div>
 							<div class="form-group">
-								<label for="address"><strong>ADDRESS *</strong></label>
-								<input type="text" name="address" id="address" class="form-control input-lg" placeholder=" Adres *">
+								<label for="address"><strong>ADRES *</strong></label>
+								<input type="text" name="address" id="address" class="form-control input-lg"
+									placeholder=" Adres *">
 							</div>
-						
-								
+
+
 							<div class="form-check">
 								<label class="form-check-label">
-								  <input id="cb" type="checkbox" class="form-check-input">
-								  Kaydol'a tıklayarak şartlarımızı kabul etmiş olursunuz *
+									<input id="cb" type="checkbox" class="form-check-input">
+									Kaydol'a tıklayarak şartlarımızı kabul etmiş olursunuz *
 								</label>
-							  </div>
+							</div>
 						</fieldset>
 					</form>
-					<button class="btn btn-lg btn-primary" onclick="registerFunction()" >Kayıt ol</button>
+					<button class="btn btn-lg btn-primary" onclick="registerFunction()">Kayıt ol</button>
 				</div>
-				
+
 				<div class="col-md-2">
 					<!-------null------>
 				</div>
-				
+
 				<div class="col-md-5">
- 				 		<form role="form">
-												
-							<h3 class="text-uppercase"> GİRİŞ YAP </h3>	
- 								
-							<div class="form-group">
-								<label for="username"><strong>USERNAME *</strong></label>
-								<input type="text" name="username" id="username" class="form-control input-lg" placeholder="Kullanıcı adı">
-							</div>
-							<div class="form-group">
-								<label for="pd"><strong>PASSWORD *</strong></label>
-								<input type="password" name="password" id="pd" class="form-control input-lg" placeholder="Şifre">
-                            </div>
-                            <hr>
-                            <hr>
-                </form>
-				<button class="btn btn-lg btn-primary" onclick="myFunction()">Giriş yap</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    </body>
+					<form role="form">
+
+						<h3 class="text-uppercase"> GİRİŞ YAP </h3>
+
+						<div class="form-group">
+							<label for="username"><strong>KULLANICI ADI *</strong></label>
+							<input type="text" name="username" id="username" class="form-control input-lg"
+								placeholder="Kullanıcı adı">
+						</div>
+						<div class="form-group">
+							<label for="pd"><strong>ŞİFRE *</strong></label>
+							<input type="password" name="password" id="pd" class="form-control input-lg"
+								placeholder="Şifre">
+						</div>
+						<hr>
+						<hr>
+					</form>
+					<button class="btn btn-lg btn-primary" onclick="myFunction()">Giriş yap</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 
 
 </html>
