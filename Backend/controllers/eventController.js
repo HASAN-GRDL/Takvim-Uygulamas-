@@ -16,7 +16,8 @@ module.exports.getEventDate = async function (req, res) {
   const result = await Event.findAll({
     where: {
       ...filter
-    }
+    },
+    order: [['createdAt', 'DESC']]
   })
   res.status(200).json(result)
 }
