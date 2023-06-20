@@ -28,6 +28,9 @@ const Event = db.define('Event', {
       notEmpty: true
     }
   },
+  end_time: {
+    type: DataTypes.TIME
+  },
   description: {
     allowNull: false,
     type: DataTypes.STRING,

@@ -8,6 +8,7 @@ module.exports.postEvent = async function (req, res) {
 
 module.exports.getEventDate = async function (req, res) {
   const { userId, date } = req.query
+  if (!userId) return res.status(400).json({ userId: 'Bu zorunlu alan' })
 
   const filter = {}
   filter.user_id = userId
