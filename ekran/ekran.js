@@ -2,6 +2,7 @@ veriCek();
 kullanici();
 
 function ekle() {
+  //tablo ekleme fonksiyonu
 
   var urlParams = new URLSearchParams(window.location.search);
   var userId = urlParams.get("user");
@@ -14,9 +15,11 @@ function ekle() {
   var end_time = document.getElementById("ftime").value;
 
 
-  if (date == "" || time == "" || aciklama == "" || tip == ""|| end_time == "") {
+  if (date == "" || time == "" || aciklama == "" || tip == "" || end_time == "") {
     return window.alert("Zorunlu bütün alanları doldurunuz");
   }
+
+//gönderilecek bilgiler
 
   const newPost = {
     user_id: userId,
@@ -39,11 +42,14 @@ function ekle() {
       if (event.description == aciklama) {
         window.alert("Plan başarıyla tanımlandı")
         veriCek();
+
+        //inputların değerleri boşaltılıyor
+
         document.getElementById("date").value = "";
         document.getElementById("stime").value = "";
         document.getElementById("ftime").value = "";
         document.getElementById("aciklama").value = "";
-        document.getElementById("tip").value = ""; 
+        document.getElementById("tip").value = "";
       }
       else {
         window.alert("Günümüz tarihinden önceye plan tanımlayamazsınız")
@@ -55,7 +61,7 @@ function ekle() {
 }
 
 function veriCek(date) {
-
+  // tabloya veri çekme fonksiyonu 
   var url = "";
   var urlParams = new URLSearchParams(window.location.search);
   var userId = urlParams.get("user");
@@ -82,11 +88,11 @@ function veriCek(date) {
       var tablo = document.getElementById("myTable");
       tablo.innerHTML = "<tr><th> ID </th><th> TİP </th><th> TARİH </th><th> BAŞLANGIÇ SAATİ</th><th>BİTİŞ SAATİ</th><th> FİYAT </th><th> AÇIKLAMA </th><th></th></tr>";
       
+      //kullanıcının tablolarını sıralıyor.
+
       for (let index = 0; index < user.length; index++) {
 
         const tr = document.createElement("tr");
-
-      
 
         var idDeger = index + 1;
         const id = document.createElement("td");
@@ -94,7 +100,6 @@ function veriCek(date) {
         id.appendChild(textId);
 
         tr.appendChild(id);
-         
 
         var tipDeger = user[index].type;
         const tip = document.createElement("td");
@@ -115,7 +120,7 @@ function veriCek(date) {
         const textBaslangicSaat = document.createTextNode(baslangicSaatDeger);
         baslangicSaat.appendChild(textBaslangicSaat);
 
-        tr.appendChild( baslangicSaat);
+        tr.appendChild(baslangicSaat);
 
         var bitisSaatDeger = user[index].end_time;
         const bitisSaat = document.createElement("td");
@@ -139,19 +144,17 @@ function veriCek(date) {
         tr.appendChild(aciklama);
 
         var btn = document.createElement("div");
-        btn.setAttribute("class","btn btn-sm btn-danger");
-        btn.setAttribute("id","btnSil");
-        btn.innerText="SİL ";
-        btn.onclick = ()=>{sil(user[index].id);}
-    
+        btn.setAttribute("class", "btn btn-sm btn-danger");
+        btn.setAttribute("id", "btnSil");
+        btn.innerText = "SİL ";
+        btn.onclick = () => { sil(user[index].id); }
+
         tr.appendChild(btn);
 
         tablo.appendChild(tr);
 
       }
 
-    
-      
     })
     .catch(error => {
       console.error("Error:", error);
@@ -159,6 +162,7 @@ function veriCek(date) {
 }
 
 function kullanici() {
+  //kullanıcı türü alma fonksiyonu
   var urlParams = new URLSearchParams(window.location.search);
   var userId = urlParams.get("user");
   console.log(userId);
@@ -180,16 +184,17 @@ function kullanici() {
 
 }
 
-function sil(id){
-    fetch("http://localhost:4444/api/event/"+id, {
+function sil(id) {
+  //tablo silme fonksiyonu
+  fetch("http://localhost:4444/api/event/" + id, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
     }
-  }) .then(()=>{
-       veriCek();
-    })
- 
+  }).then(() => {
+    veriCek();
+  })
+
 }
 
 
