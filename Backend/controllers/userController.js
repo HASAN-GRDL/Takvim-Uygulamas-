@@ -1,9 +1,8 @@
 const bcrypt = require('bcrypt')
 const User = require('../models/user')
-const Event = require('../models/event')
 
 module.exports.getUser = async function (req, res) {
-  const result = await User.findOne({ where: { username: req.params.username }, attributes: { exclude: ['password'] }, include: [{ model: Event }] })
+  const result = await User.findOne({ where: { id: req.params.id }, attributes: { exclude: ['password'] } })
   if (!result) return res.status(404).json({ error: 'Kullanıcı Bulunamadı' })
   res.json(result)
 }
