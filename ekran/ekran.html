@@ -16,42 +16,39 @@
       <form action="/action_page.php">
       <div class="row">
         <div class="col-25">
-          <label for="fname"><strong>TİP</strong></label>
+          <label for="fname"><strong>TİP *</strong></label>
         </div>
         <div class="col-75">
-          <input type="text" id="tip" name="tip" placeholder="Tip">
+          <select name="tip" id="tip">
+            <option value="meet">TOPLANTI</option>
+            <option value="plan">PLAN</option>
+            <option value="chat">SOHBET</option>
+            <option value="lesson">DERS</option>
+          </select>
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="fname"><strong>KULLANICI TİPİ</strong></label>
+          <label for="date"><strong>TARİH *</strong> </label>
         </div>
         <div class="col-75">
-          <input type="text" id="kullaniciTip" name="tip" placeholder="Kullanıcı Tipi">
+          <input id="date" type="date" class="form-control">
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="date"><strong>TARİH</strong> </label>
+          <label for="time"><strong>SAAT *</strong></label>
         </div>
         <div class="col-75">
-          <input id="date" type="date" class="form-control" placeholder="Tarih">
+          <input id="time" type="time" class="form-control" >
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="time"><strong>SAAT</strong></label>
+          <label for="subject"><strong>AÇIKLAMA *</strong></label>
         </div>
         <div class="col-75">
-          <input id="time" type="time" class="form-control" placeholder="Saat">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="subject"><strong>AÇIKLAMA</strong></label>
-        </div>
-        <div class="col-75">
-          <textarea id="aciklama" name="Açiklama" placeholder="Açıklama alanı.."></textarea> 
+          <textarea id="aciklama" name="Açiklama" placeholder="Açıklama alanı.. "></textarea> 
         </div>
         
       </div>
@@ -60,7 +57,7 @@
       
       <div> 
         
-        <a class="button" onclick="ekle()"> <span>OLUŞTUR </span></a>
+        <a class="button" onclick="ekle(),veriCek()"> <span>OLUŞTUR </span></a>
       </div>
    
     </div>
