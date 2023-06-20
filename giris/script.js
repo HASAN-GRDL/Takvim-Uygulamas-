@@ -1,7 +1,9 @@
-function myFunction() {
-
+function loginFunction() {
+//Giriş yapma fonksiyonu giriş bilgilerini kontrol ediyor.
   var username = document.getElementById("username").value;
   var password = document.getElementById("pd").value;
+
+//gönderilecek bilgiler
 
   const newPost = {
     username: username,
@@ -18,7 +20,6 @@ function myFunction() {
   })
     .then(response => response.json())
     .then(json => {
-      console.log(json)
       if (json.username == username) {
         window.alert("Giriş Yapıldı");
         window.location.href = "/ekran/ekran.html?user=" + encodeURIComponent(json.id);
@@ -29,13 +30,9 @@ function myFunction() {
     })
 }
 
-
-
-
-
-
-
 function registerFunction() {
+
+//kayıt olma fonksiyonu kayıt bilgilerini kaydediyor.
 
   var firstName = document.getElementById("firstName").value;
   var lastName = document.getElementById("lastName").value;
@@ -45,11 +42,14 @@ function registerFunction() {
   var phone = document.getElementById("phone").value;
   var email = document.getElementById("email").value;
   var address = document.getElementById("address").value;
-  console.log(document.getElementById("cb").checked)
+
+//boşluk kontrolü
 
   if (firstName == "" || lastName == "" || password == "" || userName == "" || tcNo == "" || phone == "" || email == "" || address == "" || !document.getElementById("cb").checked) {
     return window.alert("Zorunlu bütün alanları doldurunuz");
   }
+
+//gönderilecek bilgiler
 
   const newPost = {
     first_name: firstName,
@@ -71,7 +71,6 @@ function registerFunction() {
   })
     .then(response => response.json())
     .then(user => {
-      console.log(user)
       if (user.username == userName) {
         window.alert("kayıt edildi");
       }
