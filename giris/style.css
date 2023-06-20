@@ -2,7 +2,9 @@ body {
     background-color:#eee;
     background-image: url("/picture/picture.jpg");
 }
-h1,h3{
+
+h1{
+    margin-top: -31px;
     font-size: 53px;
     font-weight: 600;
     background-image: linear-gradient(to left, #553c9a, #b393d3);
@@ -11,13 +13,16 @@ h1,h3{
     -webkit-background-clip: text;
 }
 h3{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 500;
     background-image: linear-gradient(to left,   #b393d3, #553c9a);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
   
 }
 .container-fluid {
-    padding:50px;
+    padding:0px;
 }
 .container{
     background-color:rgb(220, 232, 235);
